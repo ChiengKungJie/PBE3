@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.bootstrap-v4.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#datePicker').kendoDatePicker({
+            start: 'decade',
+          depth: 'year'
+        });
+      });
+     function SubmitForm(){
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+            var date = document.getElementById("datePicker").value;
+            if (age <=25) {
+                alert("Sorry, only people age over 25 can submit this form...");
+                    return false;
+                }
+
+            else {
+                if (name != '' && age != '' && email != '' && date != ''){
+                        alert(name + ", thank you for your register!");
+                        return true;
+                    }
+                else{
+                    alert("Please fill in all the blanks...");
+                    return false;
+                }
+            }
+        }
+    </script>
+    <title>REGISTER</title>
+</head>
+<body>
+    <img src="img/logo.png" style="float: left;" width="5%">
+    <nav class="navigation">
+        <ul class="horizontal">
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="keyPeople.html">Key People</a></li>
+            <li><a href="map.html">Location</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="background">
+        <br>
+        <br>
+        <h1 id="text" style="font-size: 40px;">Register Become Member</h1>
+        <div id="text">
+            <form action="#" method="POST" onsubmit="return SubmitForm()">
+                <div>
+                    <label>Name :</label>
+                    <br>
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+                <br>
+                <div>
+                    <label>Age :</label>
+                    <br>
+                    <input type="number" id="age" placeholder="Your Age">
+                </div>
+                <br>
+                <div>
+                    <label>Email :</label>
+                    <br>
+                    <input type="email" id="email" placeholder="ex: myname@example.com">
+                </div>
+                <br>
+                <div>
+                    <label>Register Date :</label>
+                    <br>
+                    <input id="datePicker" placeholder="DD/MM/YY">
+                </div>
+                <br>
+                <button class="button" type="submit">REGISTER</button>
+            </form>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+</body>
+</html>

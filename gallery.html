@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function bigImg(img){
+	        img.style.height="280px";
+	        img.style.width="300px";
+        }
+
+        function normalImg(img){
+	        img.style.height="180px";
+	        img.style.width="192px";
+        }
+    </script>
+    <title>Gallery</title>
+</head>
+<body>
+    <img src="img/logo.png" style="float: left;" width="5%">
+    <nav class="navigation">
+        <ul class="horizontal">
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="keyPeople.html">Key People</a></li>
+            <li><a href="map.html">Location</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="background">
+        <br>
+        <span id="text" style="font-size: 45px;">&nbsp;&nbsp;<strong>Gallery</strong></span>
+        <br>
+        <br>
+        <br>
+        <table align="center">
+            <tr>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food1.jpg" width="192" height="180" style="float: left;">
+                </td>
+                <td></td>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food2.jpg" width="192" height="180" style="float: left;">
+                </td>
+                <td></td>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food3.jpg" width="192" height="180" style="float: left;">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food4.jpg" width="192" height="180" style="float: left;">
+                </td>
+                <td></td>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food5.jpg" width="192" height="180" style="float: left;">
+                </td>
+                <td></td>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food6.jpg" width="192" height="180" style="float: left;">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food7.png" width="192" height="180" style="float: left;">
+                </td>
+                <td></td>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food8.png" width="192" height="180" style="float: left;">
+                </td>
+                <td></td>
+                <td>
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/food9.png" width="192" height="180" style="float: left;">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
